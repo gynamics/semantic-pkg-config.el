@@ -1,9 +1,9 @@
-;;; semantic-pkg-config.el --- add semantic system include conveniently with pkg-config -*- lexical-binding: t -*-
+;;; semantic-pkg-config.el --- Add semantic system include conveniently with pkg-config -*- lexical-binding: t -*-
 
 ;; Author: gynamics
 ;; Maintainer: gynamics
 ;; Package-Version: 0.1
-;; Package-Requires: ((flycheck-pkg-config))
+;; Package-Requires: ((emacs "24.1") (flycheck-pkg-config "0.3"))
 ;; URL: https://github.com/gynamics/semantic-pkg-config.el
 ;; Keywords: tools
 
@@ -48,9 +48,7 @@
     (mapc #'semantic-add-system-include include-paths)
     (if flycheck-mode
         ;; Finally, do the same thing with flycheck-pkg-config
-        (flycheck-pkg-config lib))
-    ))
-
+        (flycheck-pkg-config lib))))
 
 
 (provide 'semantic-pkg-config)
